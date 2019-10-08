@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>markdown语句的基本语法与练习 | codeAndLi的博客</title>
+  <title>java中的一些容易遇到的错误记录（长期更新） | codeAndLi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="标题标题标题标题可支持6级标题">
+  <meta name="description" content="string的相等问题有时候会遇到两个字符串内容完全相等，但是进行逻辑判断的时候会">
+<meta name="keywords" content="java，随笔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="markdown语句的基本语法与练习">
-<meta property="og:url" content="http://yoursite.com/2019/10/05/Untitled-1/index.html">
+<meta property="og:title" content="java中的一些容易遇到的错误记录（长期更新）">
+<meta property="og:url" content="http://yoursite.com/2019/10/08/cj/index.html">
 <meta property="og:site_name" content="codeAndLi的博客">
-<meta property="og:description" content="标题标题标题标题可支持6级标题">
+<meta property="og:description" content="string的相等问题有时候会遇到两个字符串内容完全相等，但是进行逻辑判断的时候会">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-08T05:14:01.626Z">
+<meta property="og:updated_time" content="2019-10-08T05:30:26.471Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="markdown语句的基本语法与练习">
-<meta name="twitter:description" content="标题标题标题标题可支持6级标题">
+<meta name="twitter:title" content="java中的一些容易遇到的错误记录（长期更新）">
+<meta name="twitter:description" content="string的相等问题有时候会遇到两个字符串内容完全相等，但是进行逻辑判断的时候会">
   
     <link rel="alternative" href="/atom.xml" title="codeAndLi的博客" type="application/atom+xml">
   
@@ -150,63 +151,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Untitled-1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-cj" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      markdown语句的基本语法与练习
+      java中的一些容易遇到的错误记录（长期更新）
     </h1>
   
 
         
-        <a href="/2019/10/05/Untitled-1/" class="archive-article-date">
-  	<time datetime="2019-10-05T13:22:21.184Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-05</time>
+        <a href="/2019/10/08/cj/" class="archive-article-date">
+  	<time datetime="2019-10-08T05:15:11.990Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><h2 id="标题-1"><a href="#标题-1" class="headerlink" title="标题"></a>标题</h2><h3 id="标题-2"><a href="#标题-2" class="headerlink" title="标题"></a>标题</h3><p>标题可支持6级标题</p>
-<a id="more"></a>
-<h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><p><strong>加粗</strong><br><br><em>斜体</em><br><br><strong><em>斜体加粗</em></strong><br><br><del>带删除线</del><br></p>
-<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><blockquote>
-<p>这是一个应用</p>
-<blockquote>
-<blockquote>
-<p>第二个应用<br>其实就是在前面加几个横线</p>
-<blockquote>
-<p>如果后面的引用小于前面的，则会跟前面同级</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><h2 id="在这段文字后的分割线不会出现，会让字体变大"><a href="#在这段文字后的分割线不会出现，会让字体变大" class="headerlink" title="在这段文字后的分割线不会出现，会让字体变大"></a>在这段文字后的分割线不会出现，会让字体变大</h2><p>123</p>
-<hr>
-<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>语法为：  ![图片alt](图片地址 ‘’图片title’’)</p>
-<h1 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h1><p>[超链接名][地址 “title”]<br><br>ps：title不是必须的,title为鼠标停留在图片或超链接的提示</p>
-<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><p>在文字前加上-+*都可以</p>
-<ul>
-<li>列表</li>
-</ul>
-<ul>
-<li>列表</li>
-</ul>
-<ul>
-<li>列表<ul>
-<li>列表的下一级<h1 id="表格"><a href="#表格" class="headerlink" title="表格 "></a>表格 <br></h1>表头|表头|表头</li>
-</ul>
-</li>
-</ul>
-<p>—|:–:|—:<br>内容|内容|内容<br>内|内容|内<br>每一个表头下的”：”代表对齐方式<br>：-偏左<br>：-：剧中<br>-：偏右</p>
-<h1 id="代码显示"><a href="#代码显示" class="headerlink" title="代码显示"></a>代码显示</h1><p><code>单行</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(```)&#123;</span><br><span class="line">    代码块</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里就是markdown的一些常用的基本语法。😉<br><br>ps:markdown同样支持html的语法，结合起来更好。</p>
-
+        <h1 id="string的相等问题"><a href="#string的相等问题" class="headerlink" title="string的相等问题"></a>string的相等问题</h1><p>有时候会遇到两个字符串内容完全相等，但是进行逻辑判断的时候会<a id="more"></a>返回false，当出现这种情况时可以使用字符串的方法<br><code>string.equals</code>来进行判断<br><br>这里再引入百度知道的回答，链接：<a href="https://zhidao.baidu.com/question/535521613.html" target="_blank" rel="noopener">https://zhidao.baidu.com/question/535521613.html</a><br></p>
+<pre>
+ava中==符号是值比较符号，比较的对象是两个基本数据类型时，因为基本数据类型都是存储在栈里的，所以两数据在栈里的值相同那个，为true。
+当比较的对象是两个引用数据类型时，比较的是这两个对象在栈里的引用，这两个栈空间引用的是两个引用类型在堆里的数据，如果有两个堆就有两个对象，所以栈里的引用是不同的，为false。
+String strA = "A";
+String strB = "A";
+在java1.5之前，上面代码会创建两个对象strA==strB为false。java1.5以后的虚拟机会自动把相同的字符串引用指向同一个对象以节省空间，只会创建一个对象strA==strB为true
+</pre>
       
 
       
@@ -235,6 +207,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">java，随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -285,7 +268,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/05/Untitled-1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/08/cj/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -299,18 +282,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/08/cj/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          java中的一些容易遇到的错误记录（长期更新）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/03/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/10/05/Untitled-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">markdown语句的基本语法与练习</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -341,8 +315,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2019/10/05/Untitled-1/", 
-    sourceId: "Untitled-1",
+    url: "http://yoursite.com/2019/10/08/cj/", 
+    sourceId: "cj",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
