@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>mesh网格学习笔记 | codeAndLi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="那么什么是网格？从概念上讲，网格是图形硬件用来绘制复杂内容的结构。它至少包含一组定义3D空间中点的顶点，以及一组连接这些点的三角形-最基本的2D形状。三角形构成任何网格所代表的表面。也就是说，可以不借助建模软件的情况下实现一些简单的自己想要的图形 网格所需的组件一个是网格过滤器（Mesh Fiter）用于接收mesh的实例另一个是网格渲染器（Mesh Renderer）用于设置网格的一些属性 Me">
+  <meta name="description" content="那么什么是网格？从概念上讲，网格是图形硬件用来绘制复杂内容的结构。它至少包含一组定义3D空间中点的顶点，以及一组连接这些点的三角形-最基本的2D形状。三角形构成任何网格所代表的表面。">
 <meta name="keywords" content="unity">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mesh网格学习笔记">
 <meta property="og:url" content="http://yoursite.com/2019/10/11/mesh/index.html">
 <meta property="og:site_name" content="codeAndLi的博客">
-<meta property="og:description" content="那么什么是网格？从概念上讲，网格是图形硬件用来绘制复杂内容的结构。它至少包含一组定义3D空间中点的顶点，以及一组连接这些点的三角形-最基本的2D形状。三角形构成任何网格所代表的表面。也就是说，可以不借助建模软件的情况下实现一些简单的自己想要的图形 网格所需的组件一个是网格过滤器（Mesh Fiter）用于接收mesh的实例另一个是网格渲染器（Mesh Renderer）用于设置网格的一些属性 Me">
+<meta property="og:description" content="那么什么是网格？从概念上讲，网格是图形硬件用来绘制复杂内容的结构。它至少包含一组定义3D空间中点的顶点，以及一组连接这些点的三角形-最基本的2D形状。三角形构成任何网格所代表的表面。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-13T07:02:20.832Z">
+<meta property="og:updated_time" content="2019-10-13T07:11:06.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mesh网格学习笔记">
-<meta name="twitter:description" content="那么什么是网格？从概念上讲，网格是图形硬件用来绘制复杂内容的结构。它至少包含一组定义3D空间中点的顶点，以及一组连接这些点的三角形-最基本的2D形状。三角形构成任何网格所代表的表面。也就是说，可以不借助建模软件的情况下实现一些简单的自己想要的图形 网格所需的组件一个是网格过滤器（Mesh Fiter）用于接收mesh的实例另一个是网格渲染器（Mesh Renderer）用于设置网格的一些属性 Me">
+<meta name="twitter:description" content="那么什么是网格？从概念上讲，网格是图形硬件用来绘制复杂内容的结构。它至少包含一组定义3D空间中点的顶点，以及一组连接这些点的三角形-最基本的2D形状。三角形构成任何网格所代表的表面。">
   
     <link rel="alternative" href="/atom.xml" title="codeAndLi的博客" type="application/atom+xml">
   
@@ -171,7 +171,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>那么什么是网格？从概念上讲，网格是图形硬件用来绘制复杂内容的结构。它至少包含一组定义3D空间中点的顶点，以及一组连接这些点的三角形-最基本的2D形状。三角形构成任何网格所代表的表面。<br><br><strong>也就是说，可以不借助建模软件的情况下实现一些简单的自己想要的图形</strong></p>
+        <p>那么什么是网格？从概念上讲，网格是图形硬件用来绘制复杂内容的结构。它至少包含一组定义3D空间中点的顶点，以及一组连接这些点的三角形-最基本的2D形状。三角形构成任何网格所代表的表面。</p>
+<a id="more"></a><br>
+<p><strong>也就是说，可以不借助建模软件的情况下实现一些简单的自己想要的图形</strong></p>
 <h1 id="网格所需的组件"><a href="#网格所需的组件" class="headerlink" title="网格所需的组件"></a>网格所需的组件</h1><p>一个是网格过滤器（Mesh Fiter）用于接收mesh的实例<br><br>另一个是网格渲染器（Mesh Renderer）用于设置网格的一些属性<br></p>
 <h1 id="Mesh的重要方法"><a href="#Mesh的重要方法" class="headerlink" title="Mesh的重要方法"></a>Mesh的重要方法</h1><h2 id="mesh-vertices"><a href="#mesh-vertices" class="headerlink" title="mesh.vertices"></a>mesh.vertices</h2><p>用于定位顶点，将空间中的点用Vector3[]储存在mesh中，以供 triangles方法使用。</p>
 <h2 id="mesh-triangles"><a href="#mesh-triangles" class="headerlink" title="mesh.triangles"></a>mesh.triangles</h2><p>用于将顶点连接。从而做出各种图形，类型为int[]数组长度必须为<strong>3的倍数</strong>。<br><br>以api手册上的代码来举例</p>
