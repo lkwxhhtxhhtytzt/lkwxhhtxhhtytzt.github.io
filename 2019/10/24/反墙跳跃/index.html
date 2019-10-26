@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="codeAndLi的博客">
 <meta property="og:description" content="在很多2d动作游戏里面，反墙跳都是非常常用的一个技能，比如死亡细胞，空洞骑士等等一系列游戏，反墙跳都是一个实用的技能，我在做2d游戏练习的时候就因为反墙跳的问题苦恼过一阵子，且网上并没有找到专门说这个的实例，所以做下记录。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-24T10:58:10.361Z">
+<meta property="og:updated_time" content="2019-10-26T09:54:34.957Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何做一个平滑的反墙跳">
 <meta name="twitter:description" content="在很多2d动作游戏里面，反墙跳都是非常常用的一个技能，比如死亡细胞，空洞骑士等等一系列游戏，反墙跳都是一个实用的技能，我在做2d游戏练习的时候就因为反墙跳的问题苦恼过一阵子，且网上并没有找到专门说这个的实例，所以做下记录。">
@@ -171,7 +171,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在很多2d动作游戏里面，反墙跳都是非常常用的一个技能，比如死亡细胞，空洞骑士等等一系列游戏，反墙跳都是一个实用的技能，我在做2d游戏练习的时候就因为反墙跳的问题苦恼过一阵子，且网上并没有找到专门说这个的实例，所以做下记录。</p>
+        <p>在很多2d动作游戏里面，反墙跳都是非常常用的一个技能，比如死亡细胞，空洞骑士等等一系列游戏，反墙跳都是一个实用的技能，我在做2d游戏练习的时候就因为反墙跳的问题苦恼过一阵子，且网上并没有找到专门说这个的实例，所以做下记录。<a id="more"></a><br><br><br>这里用的代码示例是我在知乎一个unity专栏上看到的，这里是链接（侵删）：<a href="https://zhuanlan.zhihu.com/p/58882234" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/58882234</a></p>
+<h2 id="关于人物移动"><a href="#关于人物移动" class="headerlink" title="关于人物移动"></a>关于人物移动</h2><p>反墙跳的代码可以说跟人物移动的代码是紧密联系的，如果你的人物移动代码跟你的反墙跳的代码有所冲突，那么就有可能出现这种情况![图片alt](图片地址 ‘’图片还没截下来’’)<br><br><br>实例中的移动代码在专栏上的文章已经是介绍的很清楚了，所以我只是多说一下关于反墙跳的代码</p>
+<h2 id="反墙跳代码"><a href="#反墙跳代码" class="headerlink" title="反墙跳代码"></a>反墙跳代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">IEnumerator ClimpJumpMove()//爬墙跳</span><br><span class="line">    &#123;</span><br><span class="line">        inputEnable = false;    //此时不接受其余输入</span><br><span class="line">        gravityEnable = false;</span><br><span class="line">        isClimb = false;</span><br><span class="line">        playAnimator.SetTrigger(&quot;IsStopClimpJump&quot;);</span><br><span class="line"></span><br><span class="line">        playAnimator.ResetTrigger(&quot;IsClimb&quot;);</span><br><span class="line">        if (nowDir == PlayDir.Left)</span><br><span class="line">        &#123;</span><br><span class="line">            moveSpeed.x = 8;</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            moveSpeed.x = -8;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        moveSpeed.y =  6;</span><br><span class="line">        yield return new WaitForSeconds(0.15f);</span><br><span class="line">        inputEnable = true;</span><br><span class="line">        gravityEnable = true;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里就是反墙跳的代码，其实就是进行一个逻辑判断决定跳跃的方向，然后设定x轴的速度，然后接着设置一下y轴的速度，在配合人物移动的代码形成反墙跳。</p>
+<h2 id="需要注意的地方"><a href="#需要注意的地方" class="headerlink" title="需要注意的地方"></a>需要注意的地方</h2><p>我自己写反墙跳代码时，因为人物移动代码不是我写的，所以尝试了多种办法都没有成功（参考那张图）所以我觉得反墙跳的代码相对来说很简单，如果尝试失败，应该多检查和修改人物移动代码。</p>
 
       
 
