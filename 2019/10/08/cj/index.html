@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="codeAndLi的博客">
 <meta property="og:description" content="string的相等问题有时候会遇到两个字符串内容完全相等，但是进行逻辑判断的时候会">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-11T01:32:14.892Z">
+<meta property="og:updated_time" content="2019-11-04T14:33:57.943Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java中的一些容易遇到的错误记录（长期更新）">
 <meta name="twitter:description" content="string的相等问题有时候会遇到两个字符串内容完全相等，但是进行逻辑判断的时候会">
@@ -179,6 +179,8 @@ String strA = "A";
 String strB = "A";
 在java1.5之前，上面代码会创建两个对象strA==strB为false。java1.5以后的虚拟机会自动把相同的字符串引用指向同一个对象以节省空间，只会创建一个对象strA==strB为true
 </pre>
+<h1 id="tostring空值问题"><a href="#tostring空值问题" class="headerlink" title="tostring空值问题"></a>tostring空值问题</h1><p>当一个null值对象使用tostring方法时会直接报错，即使你进行逻辑判断也是没用的，因为并不会返回值，而是执行到相关代码时会直接报错中断。<br>（一节课的血泪教训）</p>
+
       
 
       
