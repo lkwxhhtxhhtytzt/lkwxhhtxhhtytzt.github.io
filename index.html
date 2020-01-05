@@ -148,6 +148,177 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-字节字符流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/05/字节字符流/">字节字符流</a>
+    </h1>
+  
+
+        
+        <a href="/2020/01/05/字节字符流/" class="archive-article-date">
+  	<time datetime="2020-01-05T11:08:34.855Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>字节流实例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public void Copyfile(String url1,String url2) throws IOException&#123;//字节流</span><br><span class="line">		InputStream inputStream=new FileInputStream(url1);</span><br><span class="line">		int a= inputStream.available();</span><br><span class="line">		byte[] b=new byte[a];</span><br><span class="line">		inputStream.read(b,0,a);</span><br><span class="line">		OutputStream outStream=new FileOutputStream(url2);</span><br><span class="line">		outStream.write(b);</span><br><span class="line">		inputStream.close();</span><br><span class="line">		outStream.close();</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>字符流实例</p>
+<pre><code class="bash">
+public static void copyTextFile(String url1,String url2) throws IOException{//:按行读取文本文件，并写入到另外一个文件
+        BufferedReader br=new BufferedReader(new FileReader(url1));
+        BufferedWriter writer=new BufferedWriter(new FileWriter(url2));
+        String bb=new String(<span class="string">"xx"</span>);
+        <span class="keyword">while</span> (bb!=null) {
+            bb=br.readLine();
+            <span class="keyword">if</span> (bb==null) {
+                <span class="built_in">break</span>;
+            }
+            writer.write(bb);
+            System.out.println(bb);
+
+
+        }
+        br.close();
+        writer.close();
+
+
+
+    }</code></pre>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/05/字节字符流/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-对话" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/05/对话/">对话系统相关</a>
+    </h1>
+  
+
+        
+        <a href="/2020/01/05/对话/" class="archive-article-date">
+  	<time datetime="2020-01-05T10:43:47.955Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">unity</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/05/对话/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ScriptableObject" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -591,7 +762,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 codeAndLi
+    		&copy; 2020 codeAndLi
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
