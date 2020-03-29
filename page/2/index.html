@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>常用的unity脚本记录 | codeAndLi的博客</title>
+  <title>codeAndLi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2d人物行走以及跳跃脚本 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758private Rigidbody2D rig;public Animator anim;public float speed;public Transfor">
-<meta name="keywords" content="unity">
-<meta property="og:type" content="article">
-<meta property="og:title" content="常用的unity脚本记录">
-<meta property="og:url" content="http://yoursite.com/2020/01/15/常用unity脚本/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="codeAndLi的博客">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="codeAndLi的博客">
-<meta property="og:description" content="2d人物行走以及跳跃脚本 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758private Rigidbody2D rig;public Animator anim;public float speed;public Transfor">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-29T02:54:03.201Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常用的unity脚本记录">
-<meta name="twitter:description" content="2d人物行走以及跳跃脚本 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758private Rigidbody2D rig;public Animator anim;public float speed;public Transfor">
+<meta name="twitter:title" content="codeAndLi的博客">
   
     <link rel="alternative" href="/atom.xml" title="codeAndLi的博客" type="application/atom+xml">
   
@@ -151,168 +146,52 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-常用unity脚本" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      常用的unity脚本记录
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/03/hello-world/">Hello World</a>
     </h1>
   
 
         
-        <a href="/2020/01/15/常用unity脚本/" class="archive-article-date">
-  	<time datetime="2020-01-15T14:32:54.176Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-15</time>
+        <a href="/2019/10/03/hello-world/" class="archive-article-date">
+  	<time datetime="2019-10-03T09:53:44.021Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h1 id="2d人物行走以及跳跃脚本"><a href="#2d人物行走以及跳跃脚本" class="headerlink" title="2d人物行走以及跳跃脚本"></a>2d人物行走以及跳跃脚本</h1><!--more-->
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">private Rigidbody2D rig;</span><br><span class="line">public Animator anim;</span><br><span class="line"></span><br><span class="line">public <span class="built_in">float</span> speed;</span><br><span class="line">public Transform dimian;</span><br><span class="line">public LayerMask ground;</span><br><span class="line"></span><br><span class="line">private int jumpcount;</span><br><span class="line">private bool isjump;</span><br><span class="line">public bool isground;</span><br><span class="line">private bool iskey;</span><br><span class="line">public <span class="built_in">float</span> jumpspeed;</span><br><span class="line">void Start()</span><br><span class="line">&#123;</span><br><span class="line">    rig = GetComponent&lt;Rigidbody2D&gt;();</span><br><span class="line">    anim = GetComponent&lt;Animator&gt;();</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">void Update()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (Input.GetButtonDown(<span class="string">"jump"</span>) &amp;&amp; jumpcount &gt; 0)</span><br><span class="line">    &#123;</span><br><span class="line">        iskey = <span class="literal">true</span>;</span><br><span class="line">       // <span class="built_in">print</span>(<span class="string">" iskey = true"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">private void FixedUpdate()</span><br><span class="line">&#123;</span><br><span class="line">    isground = Physics2D.OverlapCircle(dimian.position, 0.1f, ground);</span><br><span class="line">    move();</span><br><span class="line">    jump();</span><br><span class="line">    donghua();</span><br><span class="line">&#125;</span><br><span class="line">public void <span class="function"><span class="title">move</span></span>() &#123;</span><br><span class="line">    <span class="built_in">float</span> horizontalmove = Input.GetAxisRaw(<span class="string">"Horizontal"</span>);</span><br><span class="line">    rig.velocity = new Vector2(horizontalmove*speed,rig.velocity.y);</span><br><span class="line">    <span class="keyword">if</span> (horizontalmove != 0) &#123;</span><br><span class="line">        transform.localScale = new Vector3(horizontalmove*4,4,1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public void <span class="function"><span class="title">jump</span></span>() &#123;</span><br><span class="line">    <span class="keyword">if</span> (isground) &#123;</span><br><span class="line">        jumpcount = 2;</span><br><span class="line">        isjump = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (iskey &amp;&amp; isground)</span><br><span class="line">    &#123;</span><br><span class="line">        isjump = <span class="literal">true</span>;</span><br><span class="line">        rig.velocity = new Vector3(rig.velocity.x, jumpspeed);</span><br><span class="line">        jumpcount--;</span><br><span class="line">        iskey = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (iskey &amp;&amp; jumpcount &gt; 0 &amp;&amp; isjump) &#123;</span><br><span class="line">        rig.velocity = new Vector3(rig.velocity.x, jumpspeed);</span><br><span class="line">        jumpcount--;</span><br><span class="line">        iskey = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="寻找在范围内的指定标签物体"><a href="#寻找在范围内的指定标签物体" class="headerlink" title="寻找在范围内的指定标签物体"></a>寻找在范围内的指定标签物体</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">wuti = GameObject.FindGameObjectsWithTag(<span class="string">"dir1"</span>);</span><br><span class="line">        foreach (GameObject danqiandir <span class="keyword">in</span> wuti)</span><br><span class="line">        &#123;</span><br><span class="line">            juli = Vector3.Distance( gameObject.transform.position, danqiandir.transform.position);</span><br><span class="line">            <span class="keyword">if</span> (juli &lt;=tancebanjing)</span><br><span class="line">            &#123;</span><br><span class="line">                danqianjuli = juli;</span><br><span class="line">                danqian = danqiandir;</span><br><span class="line">                danqianjuli=Vector3.Distance(gameObject.transform.position, danqian.transform.position);</span><br><span class="line">                //<span class="built_in">print</span>(danqianjuli);</span><br><span class="line">               </span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="获取一个物体的子物体坐标"><a href="#获取一个物体的子物体坐标" class="headerlink" title="获取一个物体的子物体坐标"></a>获取一个物体的子物体坐标</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public static Transform[] lujing;</span><br><span class="line">   </span><br><span class="line"></span><br><span class="line">   private void Awake()</span><br><span class="line">   &#123;</span><br><span class="line">       lujing = new Transform[transform.childCount];</span><br><span class="line">       <span class="keyword">for</span> (int i=0; i&lt;lujing.Length;i++)</span><br><span class="line">       &#123;</span><br><span class="line">           lujing[i] = transform.GetChild(i);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="常用属性记录"><a href="#常用属性记录" class="headerlink" title="常用属性记录"></a>常用属性记录</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public <span class="built_in">float</span> healthvalue;//健康</span><br><span class="line">   public <span class="built_in">float</span> armor;//护甲</span><br><span class="line">   public Slider xuantiao;</span><br><span class="line">   public <span class="built_in">float</span> StartHealth;//起始血量</span><br><span class="line">   public Canvas text;//受到伤害时字体显示</span><br><span class="line">   public Transform transformtext;//字体显示的位置</span><br><span class="line">   public Text text1;</span><br><span class="line">   public Color sickcolor;//收到伤害的身体颜色</span><br><span class="line">   public GameObject play;//渲染器位置</span><br><span class="line">   public <span class="built_in">float</span> colortime;//受伤变色的时间</span><br><span class="line">   [Header(<span class="string">"不用设置的属性"</span>)]</span><br><span class="line">   public Color originalcolor;</span><br><span class="line">   public Renderer sprite ;//渲染器</span><br></pre></td></tr></table></figure>
-
-<h1 id="镜头抖动"><a href="#镜头抖动" class="headerlink" title="镜头抖动"></a>镜头抖动</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"> public class CameraController : MonoBehaviour</span><br><span class="line">&#123;</span><br><span class="line">    private Transform target;//player</span><br><span class="line">    [SerializeField] private <span class="built_in">float</span> smoothSpeed;</span><br><span class="line"></span><br><span class="line">    [SerializeField] private <span class="built_in">float</span> minX, minY, maxX, maxY;</span><br><span class="line"></span><br><span class="line">    private Vector3 screenShakeActive;</span><br><span class="line">    private <span class="built_in">float</span> screenShakeAmount;</span><br><span class="line"></span><br><span class="line">    private void Start()</span><br><span class="line">    &#123;</span><br><span class="line">        target = GameObject.FindGameObjectWithTag(<span class="string">"Player"</span>).GetComponent&lt;Transform&gt;();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void LateUpdate()</span><br><span class="line">    &#123;</span><br><span class="line">        transform.position = Vector3.Lerp(transform.position, new Vector3(target.position.x, target.position.y, transform.position.z), smoothSpeed * Time.deltaTime);</span><br><span class="line">        transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX), Mathf.Clamp(transform.position.y, minY, maxY), -10);</span><br><span class="line"></span><br><span class="line">        CameraShake();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void CameraShake()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (screenShakeAmount &gt; 0)</span><br><span class="line">        &#123;</span><br><span class="line">            screenShakeActive = new Vector3(Random.Range(-screenShakeAmount, screenShakeAmount), Random.Range(-screenShakeAmount, screenShakeAmount), 0f);</span><br><span class="line">            screenShakeAmount -= Time.deltaTime;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            screenShakeActive = Vector3.zero;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        transform.position += screenShakeActive;//current position += shake</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void ScreenShake(<span class="built_in">float</span> toShake)</span><br><span class="line">    &#123;</span><br><span class="line">        //<span class="keyword">if</span>(toShake &gt; screenShakeAmount)</span><br><span class="line">        screenShakeAmount = toShake;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="物体随镜头旋转"><a href="#物体随镜头旋转" class="headerlink" title="物体随镜头旋转"></a>物体随镜头旋转</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - firePoint.position;//获取物体与目标的向量信息</span><br><span class="line">        <span class="built_in">float</span> rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;</span><br><span class="line">        transform.rotation = Quaternion.Euler(0, 0, rotZ + offset);</span><br><span class="line"></span><br><span class="line">        //有一定bug</span><br><span class="line">        当firepoint跟物体的transfron.position不同时，鼠标靠近会导致一定的鬼畜行为</span><br></pre></td></tr></table></figure>
-
-<h1 id="一些接口"><a href="#一些接口" class="headerlink" title="一些接口"></a>一些接口</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line">命名空间：using UnityEngine.EventSystems;</span><br><span class="line"></span><br><span class="line">IPointerEnterHandler</span><br><span class="line">该接口实现方法如下：</span><br><span class="line"></span><br><span class="line">public void OnPointerEnter(PointerEventData eventData)</span><br><span class="line">&#123;</span><br><span class="line">    //当鼠标光标移入该对象时触发</span><br><span class="line">&#125;</span><br><span class="line">IPointerExitHandler</span><br><span class="line">该接口实现方法如下：</span><br><span class="line"></span><br><span class="line">public void OnPointerExit(PointerEventData eventData)</span><br><span class="line">&#123;</span><br><span class="line">    //当鼠标光标移出该对象时触发</span><br><span class="line">&#125;</span><br><span class="line">IPointerDownHandler</span><br><span class="line">该接口实现方法如下：</span><br><span class="line"></span><br><span class="line">public void OnPointerDown(PointerEventData eventData)</span><br><span class="line">&#123;</span><br><span class="line">    //鼠标点击A对象，按下鼠标时A对象响应此事件</span><br><span class="line">&#125;</span><br><span class="line">IPointerUpHandler</span><br><span class="line">该接口实现方法如下：</span><br><span class="line"></span><br><span class="line">复制代码</span><br><span class="line">public void OnPointerUp(PointerEventData eventData)</span><br><span class="line">&#123;</span><br><span class="line">    //鼠标点击A对象，抬起鼠标时响应</span><br><span class="line">    //无论鼠标在何处抬起（即不在A对象中）</span><br><span class="line">    //都会在A对象中响应此事件</span><br><span class="line">    //注：响应此事件的前提是A对象必须响应过OnPointerDown事件</span><br><span class="line">    Debug.Log(<span class="string">"OnPointerUp "</span> + name);</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br><span class="line">IPointerClickHandler</span><br><span class="line">该接口实现方法如下：</span><br><span class="line"></span><br><span class="line">public void OnPointerClick(PointerEventData eventData)</span><br><span class="line">&#123;</span><br><span class="line">    //鼠标点击A对象，抬起鼠标时A对象响应此事件</span><br><span class="line">    //注：按下和抬起时鼠标要处于同一对象上</span><br><span class="line">&#125;</span><br><span class="line">IDragHandler</span><br><span class="line">该接口实现方法如下：</span><br><span class="line"></span><br><span class="line">复制代码</span><br><span class="line">public void OnDrag(PointerEventData eventData)</span><br><span class="line">&#123;</span><br><span class="line">    //当鼠标在A对象按下并拖拽时 A对象每帧响应一次此事件</span><br><span class="line">    //注：如果不实现此接口，则后面的四个接口方法都不会触发</span><br><span class="line">    Debug.Log(<span class="string">"OnDrag "</span> + name);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (Input.GetMouseButton(0))</span><br><span class="line">    &#123;</span><br><span class="line">        //拖拽移动图片</span><br><span class="line">        SetDraggedPosition(eventData);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">private void SetDraggedPosition(PointerEventData eventData)</span><br><span class="line">&#123;</span><br><span class="line">    var rt = gameObject.GetComponent&lt;RectTransform&gt;();</span><br><span class="line">    Vector3 globalMousePos;</span><br><span class="line">     <span class="keyword">if</span>(RectTransformUtility.ScreenPointToWorldPointInRectangle(rt,eventData.position, eventData.pressEventCamera, out globalMousePos))</span><br><span class="line">    &#123;</span><br><span class="line">        rt.position = globalMousePos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br><span class="line">IInitializePotentialDragHandler</span><br><span class="line">该接口实现方法如下：</span><br><span class="line"></span><br><span class="line">复制代码</span><br><span class="line">public void OnInitializePotentialDrag(PointerEventData eventData)</span><br><span class="line">&#123;</span><br><span class="line">    //当鼠标在A对象按下还没开始拖拽时 A对象响应此事件</span><br><span class="line">    //注：此接口事件与IPointerDownHandler接口事件类似</span><br><span class="line">    // 二者的执行顺序:先执行IPointerDownHandler，然后执行此接口事件</span><br><span class="line">    Debug.Log(<span class="string">"OnInitializePotentialDrag "</span> + name);</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br><span class="line">IBeginDragHandler</span><br><span class="line">该接口实现方法如下：</span><br><span class="line"></span><br><span class="line">public void OnBeginDrag(PointerEventData eventData)//eventdata是鼠标</span><br><span class="line">&#123;</span><br><span class="line">    //当鼠标在A对象按下并开始拖拽时 A对象响应此事件</span><br><span class="line">    // 此事件在OnInitializePotentialDrag之后响应 OnDrag之前响应</span><br><span class="line">    Debug.Log(<span class="string">"OnBeginDrag "</span> + name);</span><br><span class="line">&#125;</span><br><span class="line">IEndDragHandler</span><br><span class="line">该接口实现方法如下：</span><br><span class="line"></span><br><span class="line">public void OnEndDrag(PointerEventData eventData)</span><br><span class="line">&#123;</span><br><span class="line">    //当鼠标抬起时 A对象响应此事件</span><br><span class="line">    Debug.Log(<span class="string">"OnEndDrag "</span> + name);</span><br><span class="line">&#125;</span><br><span class="line">IDropHandler</span><br><span class="line">该接口实现方法如下：</span><br><span class="line"></span><br><span class="line">复制代码</span><br><span class="line">public void OnDrop(PointerEventData eventData)</span><br><span class="line">&#123;</span><br><span class="line">    //A、B对象必须均实现IDropHandler接口，且A至少实现IDragHandler接口</span><br><span class="line">    //当鼠标从A对象上开始拖拽，在B对象上抬起时 B对象响应此事件</span><br><span class="line">    //此时name获取到的是B对象的name属性</span><br><span class="line">    //eventData.pointerDrag表示发起拖拽的对象（GameObject）</span><br><span class="line">    Debug.Log(eventData.pointerDrag.name + <span class="string">" OnDrop to "</span> + name);</span><br><span class="line">&#125;</span><br><span class="line">//以上来自https://www.cnblogs.com/unity3ds/p/10470295.html</span><br></pre></td></tr></table></figure>
-
-<h1 id="物体随鼠标移动并随地面旋转"><a href="#物体随鼠标移动并随地面旋转" class="headerlink" title="物体随鼠标移动并随地面旋转"></a>物体随鼠标移动并随地面旋转</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);//获取鼠标在世界空间的射线</span><br><span class="line">        <span class="keyword">if</span> (Physics.Raycast(ray, out RaycastHit raycastHit)) &#123;</span><br><span class="line">            transform.position = raycastHit.point;</span><br><span class="line">            transform.rotation = Quaternion.FromToRotation(Vector3.up, raycastHit.normal);</span><br></pre></td></tr></table></figure>
-
-<h1 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h1><p>GetMouseButtonDown<br>在用户按下给定的鼠标按钮的帧期间返回true。</p>
-<p>您需要从Update函数中调用此函数，因为状态会在每帧中重置。 除非用户释放鼠标按钮并再次按下它，否则它不会返回true。 主按钮（通常是左按钮）的按钮值为0，辅助按钮为1，中间按钮为2。</p>
-<p>（不得不说谷歌翻译的越来越好了）</p>
-<h1 id="血条渐变"><a href="#血条渐变" class="headerlink" title="血条渐变"></a>血条渐变</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public void <span class="function"><span class="title">bloodbaranim</span></span>() &#123;</span><br><span class="line">       <span class="built_in">float</span> a = dir.healthvalue / dir.StartHealth;</span><br><span class="line">       gameObject.transform.GetChild(2).GetComponent&lt;Image&gt;().fillAmount = a;</span><br><span class="line">       <span class="keyword">if</span> (gameObject.transform.GetChild(2).GetComponent&lt;Image&gt;().fillAmount &lt; gameObject.transform.GetChild(1).GetComponent&lt;Image&gt;().fillAmount)</span><br><span class="line">       &#123;</span><br><span class="line">           gameObject.transform.GetChild(1).GetComponent&lt;Image&gt;().fillAmount -= shujian * Time.deltaTime;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">else</span> &#123;</span><br><span class="line">           gameObject.transform.GetChild(1).GetComponent&lt;Image&gt;().fillAmount = gameObject.transform.GetChild(2).GetComponent&lt;Image&gt;().fillAmount;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+        
+          <a class="article-more-a" href="/2019/10/03/hello-world/#more">more >></a>
+        
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">unity</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
-
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/03/hello-world/">展开全文 >></a>
+        </p>
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/15/常用unity脚本/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/03/24/遇见的错误记录/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          遇见的错误记录
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2020/01/05/字节字符流/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">字节字符流</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -332,25 +211,12 @@
 
 
 
-  
-  
-  
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script>
-  var cloudTieConfig = {
-    url: "http://yoursite.com/2020/01/15/常用unity脚本/", 
-    sourceId: "常用unity脚本",
-    productKey: "true",
-    target: "cloud-tie-wrapper"
-  };
-</script>
-<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-  
 
   
-
   
-
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -373,8 +239,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
