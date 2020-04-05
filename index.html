@@ -148,6 +148,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-信息储存" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/05/信息储存/">信息储存</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/05/信息储存/" class="archive-article-date">
+  	<time datetime="2020-04-05T04:11:05.129Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>继承ScriptableObject<br>必有的两个属性</p>
+<p>示例<br>[CreateAssetMenu(fileName =”new article” ,menuName =”new article”)]<br>public class article : ScriptableObject<br>{<br>    public int articleID;<br>    public string articleName;<br>    public Sprite articleSprie;<br>    public int articleint;<br>    [TextArea]<br>    public string articleinfo;</p>
+<pre><code>public bool equip;</code></pre><p>}</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">unity</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/05/信息储存/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -308,8 +384,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <a id="more"></a>
-<h1 id="2d人物行走以及跳跃脚本"><a href="#2d人物行走以及跳跃脚本" class="headerlink" title="2d人物行走以及跳跃脚本"></a>2d人物行走以及跳跃脚本</h1><!--more-->
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">private Rigidbody2D rig;</span><br><span class="line">public Animator anim;</span><br><span class="line"></span><br><span class="line">public <span class="built_in">float</span> speed;</span><br><span class="line">public Transform dimian;</span><br><span class="line">public LayerMask ground;</span><br><span class="line"></span><br><span class="line">private int jumpcount;</span><br><span class="line">private bool isjump;</span><br><span class="line">public bool isground;</span><br><span class="line">private bool iskey;</span><br><span class="line">public <span class="built_in">float</span> jumpspeed;</span><br><span class="line">void Start()</span><br><span class="line">&#123;</span><br><span class="line">    rig = GetComponent&lt;Rigidbody2D&gt;();</span><br><span class="line">    anim = GetComponent&lt;Animator&gt;();</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">void Update()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (Input.GetButtonDown(<span class="string">"jump"</span>) &amp;&amp; jumpcount &gt; 0)</span><br><span class="line">    &#123;</span><br><span class="line">        iskey = <span class="literal">true</span>;</span><br><span class="line">       // <span class="built_in">print</span>(<span class="string">" iskey = true"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">private void FixedUpdate()</span><br><span class="line">&#123;</span><br><span class="line">    isground = Physics2D.OverlapCircle(dimian.position, 0.1f, ground);</span><br><span class="line">    move();</span><br><span class="line">    jump();</span><br><span class="line">    donghua();</span><br><span class="line">&#125;</span><br><span class="line">public void <span class="function"><span class="title">move</span></span>() &#123;</span><br><span class="line">    <span class="built_in">float</span> horizontalmove = Input.GetAxisRaw(<span class="string">"Horizontal"</span>);</span><br><span class="line">    rig.velocity = new Vector2(horizontalmove*speed,rig.velocity.y);</span><br><span class="line">    <span class="keyword">if</span> (horizontalmove != 0) &#123;</span><br><span class="line">        transform.localScale = new Vector3(horizontalmove*4,4,1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public void <span class="function"><span class="title">jump</span></span>() &#123;</span><br><span class="line">    <span class="keyword">if</span> (isground) &#123;</span><br><span class="line">        jumpcount = 2;</span><br><span class="line">        isjump = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (iskey &amp;&amp; isground)</span><br><span class="line">    &#123;</span><br><span class="line">        isjump = <span class="literal">true</span>;</span><br><span class="line">        rig.velocity = new Vector3(rig.velocity.x, jumpspeed);</span><br><span class="line">        jumpcount--;</span><br><span class="line">        iskey = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (iskey &amp;&amp; jumpcount &gt; 0 &amp;&amp; isjump) &#123;</span><br><span class="line">        rig.velocity = new Vector3(rig.velocity.x, jumpspeed);</span><br><span class="line">        jumpcount--;</span><br><span class="line">        iskey = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="2d人物行走以及跳跃脚本"><a href="#2d人物行走以及跳跃脚本" class="headerlink" title="2d人物行走以及跳跃脚本"></a>2d人物行走以及跳跃脚本</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">private Rigidbody2D rig;</span><br><span class="line">public Animator anim;</span><br><span class="line"></span><br><span class="line">public <span class="built_in">float</span> speed;</span><br><span class="line">public Transform dimian;</span><br><span class="line">public LayerMask ground;</span><br><span class="line"></span><br><span class="line">private int jumpcount;</span><br><span class="line">private bool isjump;</span><br><span class="line">public bool isground;</span><br><span class="line">private bool iskey;</span><br><span class="line">public <span class="built_in">float</span> jumpspeed;</span><br><span class="line">void Start()</span><br><span class="line">&#123;</span><br><span class="line">    rig = GetComponent&lt;Rigidbody2D&gt;();</span><br><span class="line">    anim = GetComponent&lt;Animator&gt;();</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">void Update()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (Input.GetButtonDown(<span class="string">"jump"</span>) &amp;&amp; jumpcount &gt; 0)</span><br><span class="line">    &#123;</span><br><span class="line">        iskey = <span class="literal">true</span>;</span><br><span class="line">       // <span class="built_in">print</span>(<span class="string">" iskey = true"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">private void FixedUpdate()</span><br><span class="line">&#123;</span><br><span class="line">    isground = Physics2D.OverlapCircle(dimian.position, 0.1f, ground);</span><br><span class="line">    move();</span><br><span class="line">    jump();</span><br><span class="line">    donghua();</span><br><span class="line">&#125;</span><br><span class="line">public void <span class="function"><span class="title">move</span></span>() &#123;</span><br><span class="line">    <span class="built_in">float</span> horizontalmove = Input.GetAxisRaw(<span class="string">"Horizontal"</span>);</span><br><span class="line">    rig.velocity = new Vector2(horizontalmove*speed,rig.velocity.y);</span><br><span class="line">    <span class="keyword">if</span> (horizontalmove != 0) &#123;</span><br><span class="line">        transform.localScale = new Vector3(horizontalmove*4,4,1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public void <span class="function"><span class="title">jump</span></span>() &#123;</span><br><span class="line">    <span class="keyword">if</span> (isground) &#123;</span><br><span class="line">        jumpcount = 2;</span><br><span class="line">        isjump = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (iskey &amp;&amp; isground)</span><br><span class="line">    &#123;</span><br><span class="line">        isjump = <span class="literal">true</span>;</span><br><span class="line">        rig.velocity = new Vector3(rig.velocity.x, jumpspeed);</span><br><span class="line">        jumpcount--;</span><br><span class="line">        iskey = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (iskey &amp;&amp; jumpcount &gt; 0 &amp;&amp; isjump) &#123;</span><br><span class="line">        rig.velocity = new Vector3(rig.velocity.x, jumpspeed);</span><br><span class="line">        jumpcount--;</span><br><span class="line">        iskey = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h1 id="寻找在范围内的指定标签物体"><a href="#寻找在范围内的指定标签物体" class="headerlink" title="寻找在范围内的指定标签物体"></a>寻找在范围内的指定标签物体</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">wuti = GameObject.FindGameObjectsWithTag(<span class="string">"dir1"</span>);</span><br><span class="line">        foreach (GameObject danqiandir <span class="keyword">in</span> wuti)</span><br><span class="line">        &#123;</span><br><span class="line">            juli = Vector3.Distance( gameObject.transform.position, danqiandir.transform.position);</span><br><span class="line">            <span class="keyword">if</span> (juli &lt;=tancebanjing)</span><br><span class="line">            &#123;</span><br><span class="line">                danqianjuli = juli;</span><br><span class="line">                danqian = danqiandir;</span><br><span class="line">                danqianjuli=Vector3.Distance(gameObject.transform.position, danqian.transform.position);</span><br><span class="line">                //<span class="built_in">print</span>(danqianjuli);</span><br><span class="line">               </span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
 
@@ -329,6 +404,11 @@
 <p>您需要从Update函数中调用此函数，因为状态会在每帧中重置。 除非用户释放鼠标按钮并再次按下它，否则它不会返回true。 主按钮（通常是左按钮）的按钮值为0，辅助按钮为1，中间按钮为2。</p>
 <p>（不得不说谷歌翻译的越来越好了）</p>
 <h1 id="血条渐变"><a href="#血条渐变" class="headerlink" title="血条渐变"></a>血条渐变</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public void <span class="function"><span class="title">bloodbaranim</span></span>() &#123;</span><br><span class="line">       <span class="built_in">float</span> a = dir.healthvalue / dir.StartHealth;</span><br><span class="line">       gameObject.transform.GetChild(2).GetComponent&lt;Image&gt;().fillAmount = a;</span><br><span class="line">       <span class="keyword">if</span> (gameObject.transform.GetChild(2).GetComponent&lt;Image&gt;().fillAmount &lt; gameObject.transform.GetChild(1).GetComponent&lt;Image&gt;().fillAmount)</span><br><span class="line">       &#123;</span><br><span class="line">           gameObject.transform.GetChild(1).GetComponent&lt;Image&gt;().fillAmount -= shujian * Time.deltaTime;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">else</span> &#123;</span><br><span class="line">           gameObject.transform.GetChild(1).GetComponent&lt;Image&gt;().fillAmount = gameObject.transform.GetChild(2).GetComponent&lt;Image&gt;().fillAmount;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="异步加载和场景切换"><a href="#异步加载和场景切换" class="headerlink" title="异步加载和场景切换"></a>异步加载和场景切换</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public void LoadNextLevel()</span><br><span class="line">    &#123;</span><br><span class="line">        StartCoroutine(Loadlevel());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">IEnumerator Loadlevel()</span><br><span class="line">    &#123;</span><br><span class="line">        loadScreen.SetActive(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);</span><br><span class="line"></span><br><span class="line">        operation.allowSceneActivation = <span class="literal">false</span>;//控制不自动跳转到加载好的场景，progress值停在0.9</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (!operation.isDone)</span><br><span class="line">        &#123;</span><br><span class="line">            slider.value = operation.progress;//将加载进度传输给Slider的滑动条</span><br><span class="line"></span><br><span class="line">            text.text = operation.progress * 100 + <span class="string">"%"</span>;//文本显示百分比</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (operation.progress &gt;= 0.9f)//判断是否场景已经在后台准备好</span><br><span class="line">            &#123;</span><br><span class="line">                slider.value = 1;//强行调整到100%的进度条</span><br><span class="line"></span><br><span class="line">                text.text = <span class="string">"Press AnyKey to continue"</span>;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (Input.anyKeyDown)</span><br><span class="line">                &#123;</span><br><span class="line">                    operation.allowSceneActivation = <span class="literal">true</span>;//完成最后10%的工作，显示加载好的场景</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            yield <span class="built_in">return</span> null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    //AsyncOperation为加载场景事的各种信息</span><br><span class="line">    //记得using SceneManager</span><br></pre></td></tr></table></figure>
+
+<h1 id="移动端软键盘的弹出"><a href="#移动端软键盘的弹出" class="headerlink" title="移动端软键盘的弹出"></a>移动端软键盘的弹出</h1><p>TouchScreenKeyboard</p>
+
       
 
       
@@ -830,71 +910,6 @@ public static void copyTextFile(String url1,String url2) throws IOException{//:�
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/10/08/cj/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Untitled-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/05/Untitled-1/">markdown语句的基本语法与练习</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/05/Untitled-1/" class="archive-article-date">
-  	<time datetime="2019-10-05T13:22:21.184Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><h2 id="标题-1"><a href="#标题-1" class="headerlink" title="标题"></a>标题</h2><h3 id="标题-2"><a href="#标题-2" class="headerlink" title="标题"></a>标题</h3><p>标题可支持6级标题</p>
-        
-          <a class="article-more-a" href="/2019/10/05/Untitled-1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/05/Untitled-1/">展开全文 >></a>
         </p>
       
 
