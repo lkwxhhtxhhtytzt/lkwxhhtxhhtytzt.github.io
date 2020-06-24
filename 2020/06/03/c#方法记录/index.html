@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>如何做一个平滑的反墙跳 | codeAndLi的博客</title>
+  <title>c#方法记录 | codeAndLi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在很多2d动作游戏里面，反墙跳都是非常常用的一个技能，比如死亡细胞，空洞骑士等等一系列游戏，反墙跳都是一个实用的技能，我在做2d游戏练习的时候就因为反墙跳的问题苦恼过一阵子，且网上并没有找到专门说这个的实例，所以做下记录。">
-<meta name="keywords" content="unity">
+  <meta name="description" content="字符串转换成Char数组 12string str=&quot;string&quot;;char[] chars=str.ToCharArray();  char数组转换成字符串 12char[] chars=new char[]&amp;#123;&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;&amp;#125;;string str=new string(chars);">
+<meta name="keywords" content="c#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何做一个平滑的反墙跳">
-<meta property="og:url" content="http://yoursite.com/2019/10/24/反墙跳跃/index.html">
+<meta property="og:title" content="c#方法记录">
+<meta property="og:url" content="http://yoursite.com/2020/06/03/c#方法记录/index.html">
 <meta property="og:site_name" content="codeAndLi的博客">
-<meta property="og:description" content="在很多2d动作游戏里面，反墙跳都是非常常用的一个技能，比如死亡细胞，空洞骑士等等一系列游戏，反墙跳都是一个实用的技能，我在做2d游戏练习的时候就因为反墙跳的问题苦恼过一阵子，且网上并没有找到专门说这个的实例，所以做下记录。">
+<meta property="og:description" content="字符串转换成Char数组 12string str=&quot;string&quot;;char[] chars=str.ToCharArray();  char数组转换成字符串 12char[] chars=new char[]&amp;#123;&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;&amp;#125;;string str=new string(chars);">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-22T03:35:32.113Z">
+<meta property="og:updated_time" content="2020-06-03T03:21:55.111Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何做一个平滑的反墙跳">
-<meta name="twitter:description" content="在很多2d动作游戏里面，反墙跳都是非常常用的一个技能，比如死亡细胞，空洞骑士等等一系列游戏，反墙跳都是一个实用的技能，我在做2d游戏练习的时候就因为反墙跳的问题苦恼过一阵子，且网上并没有找到专门说这个的实例，所以做下记录。">
+<meta name="twitter:title" content="c#方法记录">
+<meta name="twitter:description" content="字符串转换成Char数组 12string str=&quot;string&quot;;char[] chars=str.ToCharArray();  char数组转换成字符串 12char[] chars=new char[]&amp;#123;&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;&amp;#125;;string str=new string(chars);">
   
     <link rel="alternative" href="/atom.xml" title="codeAndLi的博客" type="application/atom+xml">
   
@@ -151,33 +151,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-反墙跳跃" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-c#方法记录" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      如何做一个平滑的反墙跳
+      c#方法记录
     </h1>
   
 
         
-        <a href="/2019/10/24/反墙跳跃/" class="archive-article-date">
-  	<time datetime="2019-10-24T10:51:36.264Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
+        <a href="/2020/06/03/c#方法记录/" class="archive-article-date">
+  	<time datetime="2020-06-03T03:16:58.304Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在很多2d动作游戏里面，反墙跳都是非常常用的一个技能，比如死亡细胞，空洞骑士等等一系列游戏，反墙跳都是一个实用的技能，我在做2d游戏练习的时候就因为反墙跳的问题苦恼过一阵子，且网上并没有找到专门说这个的实例，所以做下记录。<a id="more"></a><br><br><br>这里用的代码示例是我在知乎一个unity专栏上看到的，这里是链接（侵删）：<a href="https://zhuanlan.zhihu.com/p/58882234" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/58882234</a></p>
-<h2 id="关于人物移动"><a href="#关于人物移动" class="headerlink" title="关于人物移动"></a>关于人物移动</h2><p>反墙跳的代码可以说跟人物移动的代码是紧密联系的，如果你的人物移动代码跟你的反墙跳的代码有所冲突，那么就有可能出现这种情况![图片alt](图片地址 ‘’图片还没截下来’’)<br><br><br>实例中的移动代码在专栏上的文章已经是介绍的很清楚了，所以我只是多说一下关于反墙跳的代码</p>
-<h2 id="反墙跳代码"><a href="#反墙跳代码" class="headerlink" title="反墙跳代码"></a>反墙跳代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">IEnumerator ClimpJumpMove()//爬墙跳</span><br><span class="line">    &#123;</span><br><span class="line">        inputEnable = false;    //此时不接受其余输入</span><br><span class="line">        gravityEnable = false;</span><br><span class="line">        isClimb = false;</span><br><span class="line">        playAnimator.SetTrigger(&quot;IsStopClimpJump&quot;);</span><br><span class="line"></span><br><span class="line">        playAnimator.ResetTrigger(&quot;IsClimb&quot;);</span><br><span class="line">        if (nowDir == PlayDir.Left)</span><br><span class="line">        &#123;</span><br><span class="line">            moveSpeed.x = 8;</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            moveSpeed.x = -8;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        moveSpeed.y =  6;</span><br><span class="line">        yield return new WaitForSeconds(0.15f);</span><br><span class="line">        inputEnable = true;</span><br><span class="line">        gravityEnable = true;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+        <p>字符串转换成Char数组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string str=<span class="string">"string"</span>;</span><br><span class="line">char[] chars=str.ToCharArray();</span><br></pre></td></tr></table></figure>
 
-<p>这里就是反墙跳的代码，其实就是进行一个逻辑判断决定跳跃的方向，然后设定x轴的速度，然后接着设置一下y轴的速度，在配合人物移动的代码形成反墙跳。</p>
-<h2 id="需要注意的地方"><a href="#需要注意的地方" class="headerlink" title="需要注意的地方"></a>需要注意的地方</h2><p>我自己写反墙跳代码时，因为人物移动代码不是我写的，所以尝试了多种办法都没有成功（参考那张图）所以我觉得反墙跳的代码相对来说很简单，如果尝试失败，应该多检查和修改人物移动代码。</p>
-
+<p>char数组转换成字符串</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char[] chars=new char[]&#123;<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>&#125;;</span><br><span class="line">string str=new string(chars);</span><br></pre></td></tr></table></figure>
       
 
       
@@ -211,7 +209,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">unity</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">c#</a>
         		</li>
       		
 		</ul>
@@ -267,7 +265,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/24/反墙跳跃/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/03/c#方法记录/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -281,18 +279,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/12/15/ScriptableObject/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ScriptableObject
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/11/mesh/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">mesh网格学习笔记</div>
+    <a href="/2020/04/05/信息储存/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">信息储存</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -323,8 +312,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2019/10/24/反墙跳跃/", 
-    sourceId: "反墙跳跃",
+    url: "http://yoursite.com/2020/06/03/c#方法记录/", 
+    sourceId: "c#方法记录",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };

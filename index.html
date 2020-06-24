@@ -148,6 +148,83 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-c#方法记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/03/c#方法记录/">c#方法记录</a>
+    </h1>
+  
+
+        
+        <a href="/2020/06/03/c#方法记录/" class="archive-article-date">
+  	<time datetime="2020-06-03T03:16:58.304Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>字符串转换成Char数组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string str=<span class="string">"string"</span>;</span><br><span class="line">char[] chars=str.ToCharArray();</span><br></pre></td></tr></table></figure>
+
+<p>char数组转换成字符串</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char[] chars=new char[]&#123;<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>&#125;;</span><br><span class="line">string str=new string(chars);</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">c#</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/06/03/c#方法记录/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-信息储存" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -321,6 +398,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="关于Transform-rotation-xyz"><a href="#关于Transform-rotation-xyz" class="headerlink" title="关于Transform.rotation.xyz"></a>关于Transform.rotation.xyz</h1><p>用debug.log（Transform.rotation.xyz）出现的并不是像unity界面上的整数形式，而是一个小数形式，如果要使用整数形式的话，要*180.<br><br>transform.up是指界面中绿色的哪一个轴，在文档中说是y轴<br><br>但其实代表它的是Transform.rotation.z<br></p>
+<h1 id="关于物体活动状态"><a href="#关于物体活动状态" class="headerlink" title="关于物体活动状态"></a>关于物体活动状态</h1><p>GameObject.activeInHierarchy<br>如果单纯的检查是否是活动状态就用这个<br>GameObject.activeSelf<br>这个如果父级是true 的话也会返回true</p>
 
       
 
@@ -408,7 +486,10 @@
 <h1 id="异步加载和场景切换"><a href="#异步加载和场景切换" class="headerlink" title="异步加载和场景切换"></a>异步加载和场景切换</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public void LoadNextLevel()</span><br><span class="line">    &#123;</span><br><span class="line">        StartCoroutine(Loadlevel());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">IEnumerator Loadlevel()</span><br><span class="line">    &#123;</span><br><span class="line">        loadScreen.SetActive(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);</span><br><span class="line"></span><br><span class="line">        operation.allowSceneActivation = <span class="literal">false</span>;//控制不自动跳转到加载好的场景，progress值停在0.9</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (!operation.isDone)</span><br><span class="line">        &#123;</span><br><span class="line">            slider.value = operation.progress;//将加载进度传输给Slider的滑动条</span><br><span class="line"></span><br><span class="line">            text.text = operation.progress * 100 + <span class="string">"%"</span>;//文本显示百分比</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (operation.progress &gt;= 0.9f)//判断是否场景已经在后台准备好</span><br><span class="line">            &#123;</span><br><span class="line">                slider.value = 1;//强行调整到100%的进度条</span><br><span class="line"></span><br><span class="line">                text.text = <span class="string">"Press AnyKey to continue"</span>;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (Input.anyKeyDown)</span><br><span class="line">                &#123;</span><br><span class="line">                    operation.allowSceneActivation = <span class="literal">true</span>;//完成最后10%的工作，显示加载好的场景</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            yield <span class="built_in">return</span> null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    //AsyncOperation为加载场景事的各种信息</span><br><span class="line">    //记得using SceneManager</span><br></pre></td></tr></table></figure>
 
 <h1 id="移动端软键盘的弹出"><a href="#移动端软键盘的弹出" class="headerlink" title="移动端软键盘的弹出"></a>移动端软键盘的弹出</h1><p>TouchScreenKeyboard</p>
+<h1 id="敌人追踪"><a href="#敌人追踪" class="headerlink" title="敌人追踪"></a>敌人追踪</h1><p>Vector2.MoveTowards<br>跟vector2.lerp本质相同</p>
+<h1 id="使用代码来给鼠标添加点击事件"><a href="#使用代码来给鼠标添加点击事件" class="headerlink" title="使用代码来给鼠标添加点击事件"></a>使用代码来给鼠标添加点击事件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Button a= dislist[1].transform.GetChild(1).GetComponent&lt;Button&gt;();</span><br><span class="line">       a.onClick.AddListener(delegate() &#123;</span><br><span class="line">           Debug.Log(&quot;sssssss&quot;);</span><br><span class="line">       &#125;);</span><br></pre></td></tr></table></figure>
 
+<h1 id="控制时间流速的方法"><a href="#控制时间流速的方法" class="headerlink" title="控制时间流速的方法"></a>控制时间流速的方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Time.timeScale=0</span><br><span class="line">//基本停止</span><br></pre></td></tr></table></figure>
       
 
       
@@ -863,82 +944,6 @@ public static void copyTextFile(String url1,String url2) throws IOException{//:�
 
 
   
-    <article id="post-cj" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/08/cj/">java中的一些容易遇到的错误记录（长期更新）</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/08/cj/" class="archive-article-date">
-  	<time datetime="2019-10-08T05:15:11.990Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="string的相等问题"><a href="#string的相等问题" class="headerlink" title="string的相等问题"></a>string的相等问题</h1><p>有时候会遇到两个字符串内容完全相等，但是进行逻辑判断的时候会
-        
-          <a class="article-more-a" href="/2019/10/08/cj/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/08/cj/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1041,6 +1046,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">c#</a>
               </li>
             
             <div class="clearfix"></div>
