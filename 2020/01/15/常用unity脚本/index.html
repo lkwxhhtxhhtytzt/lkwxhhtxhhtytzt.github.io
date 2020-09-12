@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="codeAndLi的博客">
 <meta property="og:description" content="2d人物行走以及跳跃脚本12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758private Rigidbody2D rig;public Animator anim;public float speed;public Transform">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-04-20T04:10:00.425Z">
+<meta property="og:updated_time" content="2020-09-10T08:48:26.131Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用的unity脚本记录">
 <meta name="twitter:description" content="2d人物行走以及跳跃脚本12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758private Rigidbody2D rig;public Animator anim;public float speed;public Transform">
@@ -200,6 +200,15 @@
 <h1 id="使用代码来给鼠标添加点击事件"><a href="#使用代码来给鼠标添加点击事件" class="headerlink" title="使用代码来给鼠标添加点击事件"></a>使用代码来给鼠标添加点击事件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Button a= dislist[1].transform.GetChild(1).GetComponent&lt;Button&gt;();</span><br><span class="line">       a.onClick.AddListener(delegate() &#123;</span><br><span class="line">           Debug.Log(&quot;sssssss&quot;);</span><br><span class="line">       &#125;);</span><br></pre></td></tr></table></figure>
 
 <h1 id="控制时间流速的方法"><a href="#控制时间流速的方法" class="headerlink" title="控制时间流速的方法"></a>控制时间流速的方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Time.timeScale=0</span><br><span class="line">//基本停止</span><br></pre></td></tr></table></figure>
+
+<h1 id="图片翻转"><a href="#图片翻转" class="headerlink" title="图片翻转"></a>图片翻转</h1><pre><code>if (horizontalmove &lt; 0) 
+        {
+            transform.rotation = Quaternion.Euler(0, -180, 0);
+        }
+        else if (horizontalmove &gt; 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }</code></pre>
       
 
       

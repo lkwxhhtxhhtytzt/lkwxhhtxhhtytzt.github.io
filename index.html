@@ -148,6 +148,91 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-tilemap" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/12/tilemap/">tilemap相关知识</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/12/tilemap/" class="archive-article-date">
+  	<time datetime="2020-09-12T02:09:31.048Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<h1 id="随便说说"><a href="#随便说说" class="headerlink" title="随便说说"></a>随便说说</h1><p>最近在学像素画，勉勉强强可以画一点东西出来，我也终于开始制作我的第一个独立游戏，其实之前也做过，但都是网络素材，贼难看，写的也不好。</p>
+<p>所以最近在补充知识，因为做的是一个生存建筑类的游戏，所以说tilemap相关的api去补充了一下。</p>
+<h1 id="知识记录"><a href="#知识记录" class="headerlink" title="知识记录"></a>知识记录</h1><p>以下api需要参数和更详细的介绍请前往官方手册</p>
+<p>using UnityEngine.Tilemaps;使用tilemap需要先引入库</p>
+<p>tilemap.WorldToCell世界坐标转化为map图坐标（重要）</p>
+<p>tilemap.GetTile 获取坐标处的渲染信息</p>
+<p>tilemap.settile get set 不用多说吧</p>
+<p>可能会用到的</p>
+<p> Camera.main.ScreenToWorldPoint(mousePosition);//屏幕坐标转空间坐标</p>
+<p> ps：&lt;<em>p</em>&gt;标签貌似没有空格好用😂</p>
+<p> 借鉴：<a href="https://blog.csdn.net/cpongo1/article/details/89551398?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduend~default-1-89551398.nonecase&amp;utm_term=unity%E7%93%A6%E7%89%87%E5%9C%B0%E5%9B%BE%E7%94%9F%E6%88%90" target="_blank" rel="noopener">https://blog.csdn.net/cpongo1/article/details/89551398?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduend~default-1-89551398.nonecase&amp;utm_term=unity%E7%93%A6%E7%89%87%E5%9C%B0%E5%9B%BE%E7%94%9F%E6%88%90</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">unity</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/12/tilemap/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-c#方法记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -490,6 +575,15 @@
 <h1 id="使用代码来给鼠标添加点击事件"><a href="#使用代码来给鼠标添加点击事件" class="headerlink" title="使用代码来给鼠标添加点击事件"></a>使用代码来给鼠标添加点击事件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Button a= dislist[1].transform.GetChild(1).GetComponent&lt;Button&gt;();</span><br><span class="line">       a.onClick.AddListener(delegate() &#123;</span><br><span class="line">           Debug.Log(&quot;sssssss&quot;);</span><br><span class="line">       &#125;);</span><br></pre></td></tr></table></figure>
 
 <h1 id="控制时间流速的方法"><a href="#控制时间流速的方法" class="headerlink" title="控制时间流速的方法"></a>控制时间流速的方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Time.timeScale=0</span><br><span class="line">//基本停止</span><br></pre></td></tr></table></figure>
+
+<h1 id="图片翻转"><a href="#图片翻转" class="headerlink" title="图片翻转"></a>图片翻转</h1><pre><code>if (horizontalmove &lt; 0) 
+        {
+            transform.rotation = Quaternion.Euler(0, -180, 0);
+        }
+        else if (horizontalmove &gt; 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }</code></pre>
       
 
       
@@ -839,82 +933,6 @@ public static void copyTextFile(String url1,String url2) throws IOException{//:�
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/10/24/反墙跳跃/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-mesh" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/mesh/">mesh网格学习笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/11/mesh/" class="archive-article-date">
-  	<time datetime="2019-10-11T01:32:38.229Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>那么什么是网格？从概念上讲，网格是图形硬件用来绘制复杂内容的结构。它至少包含一组定义3D空间中点的顶点，以及一组连接这些点的三角形-最基本的2D形状。三角形构成任何网格所代表的表面。</p>
-        
-          <a class="article-more-a" href="/2019/10/11/mesh/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">unity</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/mesh/">展开全文 >></a>
         </p>
       
 
